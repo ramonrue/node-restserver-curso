@@ -24,6 +24,7 @@ process.env.CADUCIDAD_TOKEN=60 * 60 * 24 *30;
 //SEED TOKEN******/
 //************/
 process.env.SEED=process.env.SEED || 'este-es-el-seed-de-desarrollo';
+
 //************/
 //BASE DE DATOS******/
 //************/
@@ -34,8 +35,12 @@ if (process.env.NODE_ENV == 'dev') {
 } else {
     urlDB=process.env.MONGO_URI;
 }
-
 process.env.URLDB=urlDB;
+
+//************/
+//GOOGLE CLIENT******/
+//************/
+process.env.CLIENT_ID=process.env.CLIENT_ID || '369966208849-p0m5v417lphu4jar6hu6m9p2okha3sbg.apps.googleusercontent.com';
 
 
 
